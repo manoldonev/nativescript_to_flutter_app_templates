@@ -49,82 +49,108 @@ class MyDrawer extends StatelessWidget {
             ),
             accountName: const Text('User Name'),
             accountEmail: const Text('username@mail.com'),
+            margin: EdgeInsets.zero,
           ),
-          ListTile(
-            leading: const Icon(Icons.home),
-            title: const Text('Home'),
-            selected: _selectedIndex == 0,
-            onTap: () {
-              if (_selectedIndex == 0) {
-                Navigator.pop(context);
-                return;
-              }
+          Container(
+            color: _selectedIndex == 0
+                ? Theme.of(context).accentColor.withAlpha(40)
+                : null,
+            child: ListTile(
+              leading: const Icon(Icons.home),
+              title: const Text('Home'),
+              selected: _selectedIndex == 0,
+              onTap: () {
+                if (_selectedIndex == 0) {
+                  Navigator.pop(context);
+                  return;
+                }
 
-              Provider.of<DrawerStateInfo>(context, listen: false)
-                  .selectedIndex = 0;
-              Navigator.popAndPushNamed(context, Routes.home);
-            },
+                Provider.of<DrawerStateInfo>(context, listen: false)
+                    .selectedIndex = 0;
+                Navigator.popAndPushNamed(context, Routes.home);
+              },
+            ),
           ),
-          ListTile(
-            leading: const Icon(Icons.view_list),
-            title: const Text('Browse'),
-            selected: _selectedIndex == 1,
-            onTap: () {
-              if (_selectedIndex == 1) {
-                Navigator.pop(context);
-                return;
-              }
+          Container(
+            color: _selectedIndex == 1
+                ? Theme.of(context).accentColor.withAlpha(40)
+                : null,
+            child: ListTile(
+              leading: const Icon(Icons.view_list),
+              title: const Text('Browse'),
+              selected: _selectedIndex == 1,
+              onTap: () {
+                if (_selectedIndex == 1) {
+                  Navigator.pop(context);
+                  return;
+                }
 
-              Provider.of<DrawerStateInfo>(context, listen: false)
-                  .selectedIndex = 1;
-              Navigator.popAndPushNamed(context, Routes.browse);
-            },
+                Provider.of<DrawerStateInfo>(context, listen: false)
+                    .selectedIndex = 1;
+                Navigator.popAndPushNamed(context, Routes.browse);
+              },
+            ),
           ),
-          ListTile(
-            leading: const Icon(Icons.search),
-            title: const Text('Search'),
-            selected: _selectedIndex == 2,
-            onTap: () {
-              if (_selectedIndex == 2) {
-                Navigator.pop(context);
-                return;
-              }
+          Container(
+            color: _selectedIndex == 2
+                ? Theme.of(context).accentColor.withAlpha(40)
+                : null,
+            child: ListTile(
+              leading: const Icon(Icons.search),
+              title: const Text('Search'),
+              selected: _selectedIndex == 2,
+              onTap: () {
+                if (_selectedIndex == 2) {
+                  Navigator.pop(context);
+                  return;
+                }
 
-              Provider.of<DrawerStateInfo>(context, listen: false)
-                  .selectedIndex = 2;
-              Navigator.popAndPushNamed(context, Routes.search);
-            },
+                Provider.of<DrawerStateInfo>(context, listen: false)
+                    .selectedIndex = 2;
+                Navigator.popAndPushNamed(context, Routes.search);
+              },
+            ),
           ),
-          ListTile(
-            leading: const Icon(Icons.star),
-            title: const Text('Featured'),
-            selected: _selectedIndex == 3,
-            onTap: () {
-              if (_selectedIndex == 3) {
-                Navigator.pop(context);
-                return;
-              }
+          Container(
+            color: _selectedIndex == 3
+                ? Theme.of(context).accentColor.withAlpha(40)
+                : null,
+            child: ListTile(
+              leading: const Icon(Icons.star),
+              title: const Text('Featured'),
+              selected: _selectedIndex == 3,
+              onTap: () {
+                if (_selectedIndex == 3) {
+                  Navigator.pop(context);
+                  return;
+                }
 
-              Provider.of<DrawerStateInfo>(context, listen: false)
-                  .selectedIndex = 3;
-              Navigator.popAndPushNamed(context, Routes.featured);
-            },
+                Provider.of<DrawerStateInfo>(context, listen: false)
+                    .selectedIndex = 3;
+                Navigator.popAndPushNamed(context, Routes.featured);
+              },
+            ),
           ),
           const Divider(color: Colors.grey),
-          ListTile(
-            leading: const Icon(Icons.settings),
-            title: const Text('Settings'),
-            selected: _selectedIndex == 4,
-            onTap: () {
-              if (_selectedIndex == 4) {
-                Navigator.pop(context);
-                return;
-              }
+          Container(
+            color: _selectedIndex == 4
+                ? Theme.of(context).accentColor.withAlpha(40)
+                : null,
+            child: ListTile(
+              leading: const Icon(Icons.settings),
+              title: const Text('Settings'),
+              selected: _selectedIndex == 4,
+              onTap: () {
+                if (_selectedIndex == 4) {
+                  Navigator.pop(context);
+                  return;
+                }
 
-              Provider.of<DrawerStateInfo>(context, listen: false)
-                  .selectedIndex = 4;
-              Navigator.popAndPushNamed(context, Routes.settings);
-            },
+                Provider.of<DrawerStateInfo>(context, listen: false)
+                    .selectedIndex = 4;
+                Navigator.popAndPushNamed(context, Routes.settings);
+              },
+            ),
           ),
         ],
       ),
