@@ -7,46 +7,13 @@ import 'browse_page.dart';
 import 'search_page.dart';
 import 'featured_page.dart';
 import 'settings_page.dart';
+import 'themes/nativescript_theme.dart';
 
 void main() {
   runApp(ChangeNotifierProvider(
     create: (context) => DrawerStateInfo(),
     child: MyApp(),
   ));
-}
-
-class CustomPalettes {
-  static const MaterialColor nativeScriptBlue = MaterialColor(
-    0xff3e5bfe,
-    <int, Color>{
-      50: Color(0xffe8ebff),
-      100: Color(0xffc5ceff),
-      200: Color(0xff9fadff),
-      300: Color(0xff788cfe),
-      400: Color(0xff5b74fe),
-      500: Color(0xff3e5bfe),
-      600: Color(0xff3853fe),
-      700: Color(0xff3049fe),
-      800: Color(0xff2840fe),
-      900: Color(0xff1b2ffd),
-    },
-  );
-
-  static const MaterialColor nativeScriptBlueDark = MaterialColor(
-    0xff212121,
-    <int, Color>{
-      50: Color(0xfff2f2f2),
-      100: Color(0xffe6e6e6),
-      200: Color(0xffcccccc),
-      300: Color(0xffb3b3b3),
-      400: Color(0xff999999),
-      500: Color(0xff808080),
-      600: Color(0xff666666),
-      700: Color(0xff4d4d4d),
-      800: Color(0xff333333),
-      900: Color(0xff191919),
-    },
-  );
 }
 
 class MyApp extends StatelessWidget {
@@ -56,13 +23,8 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: appTitle,
-      theme: ThemeData(
-        primarySwatch: CustomPalettes.nativeScriptBlue,
-      ),
-      darkTheme: ThemeData.dark().copyWith(
-        primaryColor: Color(0xff3e5bfe),
-        accentColor: Color(0xff30bcff),
-      ),
+      theme: NativeScriptTheme.light(),
+      darkTheme: NativeScriptTheme.dark(),
       onGenerateRoute: (RouteSettings settings) {
         switch (settings.name) {
           case Routes.home:

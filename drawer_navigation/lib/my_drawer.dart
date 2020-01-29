@@ -53,7 +53,7 @@ class MyDrawer extends StatelessWidget {
           ),
           Container(
             color: _selectedIndex == 0
-                ? Theme.of(context).accentColor.withAlpha(40)
+                ? Theme.of(context).accentColor.withAlpha(30)
                 : null,
             child: ListTile(
               leading: const Icon(Icons.home),
@@ -73,7 +73,7 @@ class MyDrawer extends StatelessWidget {
           ),
           Container(
             color: _selectedIndex == 1
-                ? Theme.of(context).accentColor.withAlpha(40)
+                ? Theme.of(context).accentColor.withAlpha(30)
                 : null,
             child: ListTile(
               leading: const Icon(Icons.view_list),
@@ -93,7 +93,7 @@ class MyDrawer extends StatelessWidget {
           ),
           Container(
             color: _selectedIndex == 2
-                ? Theme.of(context).accentColor.withAlpha(40)
+                ? Theme.of(context).accentColor.withAlpha(30)
                 : null,
             child: ListTile(
               leading: const Icon(Icons.search),
@@ -113,7 +113,7 @@ class MyDrawer extends StatelessWidget {
           ),
           Container(
             color: _selectedIndex == 3
-                ? Theme.of(context).accentColor.withAlpha(40)
+                ? Theme.of(context).accentColor.withAlpha(30)
                 : null,
             child: ListTile(
               leading: const Icon(Icons.star),
@@ -134,7 +134,7 @@ class MyDrawer extends StatelessWidget {
           const Divider(color: Colors.grey),
           Container(
             color: _selectedIndex == 4
-                ? Theme.of(context).accentColor.withAlpha(40)
+                ? Theme.of(context).accentColor.withAlpha(30)
                 : null,
             child: ListTile(
               leading: const Icon(Icons.settings),
